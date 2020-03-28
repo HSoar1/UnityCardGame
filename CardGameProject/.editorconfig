@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0109: メンバーは継承されたメンバーを非表示にしません。new キーワードは不要です
+dotnet_diagnostic.CS0109.severity = none

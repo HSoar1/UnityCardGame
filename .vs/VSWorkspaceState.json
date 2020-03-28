@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Assets",
+    "\\Assets\\Scripts"
   ],
-  "SelectedNode": "\\Assets",
+  "SelectedNode": "\\Assets\\Scripts\\README.txt",
   "PreviewInSolutionExplorer": false
 }

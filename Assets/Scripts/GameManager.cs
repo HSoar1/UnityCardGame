@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour{
     [SerializeField] Transform enemyFieldTransform;
     [SerializeField] CardController cardPrefab;
 
+   
     public bool isPlayerTurn;//どっちのターンか判断するのに使用
     
     //カードリスト(山札)の決め打ち
@@ -41,14 +42,17 @@ public class GameManager : MonoBehaviour{
     [SerializeField] Text timeCountText;
     int timeCount;
 
-    //シングルトン化(どこからでもアクセスできるようにする)
-    public static GameManager instance;
+    //シングルトン化(どこからでもアクセスできるようにするらしい)
+    public static GameManager instance;//調べた結果シングルトン化ではなく静的メソッドにしている
+                                       //シングルトン化とは別物 (*
+                                       // インスタンスって？ : クラスという設計図を基に作成した実体
+                                       //このinstanceはただの変数
 
-    private void Awake(){ //起きたバグAwakwやawakeの綴ミスで動かない=>Awakeは自分で名前を付けた関数ではなく、もともと用意されているもの
+    private void Awake(){ // Awakeは自分で名前を付けた関数ではなく、もともと用意されているもの
     
-    if(instance == null) {//これがよくわからない　シングルトン化と合わせて後で調べる
+    if(instance == null) {// instanceに何も無かったら
 
-            instance = this;//thisに関することを調べる
+            instance = this;// this : 実行中のインスタンス
         }
     }
     
@@ -61,7 +65,7 @@ public class GameManager : MonoBehaviour{
     void StartGame() {
 
         //結果画面を非表示にする
-        resultPanel.SetActive(false);
+        resultPanel.SetActive(false);//SetActive アクティブ、非アクティブを設定(*
 
         //プレイヤーヒーローのHPを10にする
         playerHeroHp = 10;
@@ -131,7 +135,7 @@ public class GameManager : MonoBehaviour{
         /*handとfieldのカードの削除*/
 
         //プレイヤーの手札を削除
-        foreach (Transform card in playerHandTransform) {
+        foreach (Transform card in playerHandTransform) { //for文の亜種(*
 
             //指定したGameObjectを破壊(削除)する
             Destroy(card.gameObject);
