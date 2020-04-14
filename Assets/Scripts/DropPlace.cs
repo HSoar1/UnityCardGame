@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DropPlace : MonoBehaviour, IDropHandler{
+public class DropPlace : MonoBehaviour, IDropHandler {
 
     public enum TYPE {
         HAND,
@@ -11,7 +11,7 @@ public class DropPlace : MonoBehaviour, IDropHandler{
     }
 
     public TYPE type;
-    public void OnDrop(PointerEventData eventData){
+    public void OnDrop(PointerEventData eventData) {
         if(type == TYPE.HAND) {
             
             return;

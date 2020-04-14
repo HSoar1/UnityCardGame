@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardView : MonoBehaviour{
+public class CardView : MonoBehaviour {
 
     [SerializeField] Text nameText;
     [SerializeField] Text hpText;
@@ -21,7 +21,7 @@ public class CardView : MonoBehaviour{
         iconImage.sprite = cardModel.icon;
     }
 
-    public void Refresh(CardModel cardModel){
+    public void Refresh(CardModel cardModel) {
 
         hpText.text = cardModel.hp.ToString();
         atText.text = cardModel.at.ToString();

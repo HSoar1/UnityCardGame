@@ -4,24 +4,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 //攻撃される側
-public class AttackedHero : MonoBehaviour, IDropHandler
-{
+public class AttackedHero : MonoBehaviour, IDropHandler {
 
-    public void OnDrop(PointerEventData eventData)
-    {
+    public void OnDrop(PointerEventData eventData) {
 
         /*攻撃*/
         //attackerカード選択
         CardController attacker = eventData.pointerDrag.GetComponent<CardController>();
 
 
-        if (attacker == null)
-        {
+        if (attacker == null) {
             return;
         }
 
-        if (attacker.model.canAttack)
-        {
+        if (attacker.model.canAttack) {
             //attckerがheroに攻撃する
             GameManager.instance.AttackToHero(attacker,true);
 

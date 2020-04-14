@@ -5,13 +5,13 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler{
+public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler {
 
     public Transform defaultParent;
 
     public bool isDraggable;
 
-    public void OnBeginDrag(PointerEventData eventData){
+    public void OnBeginDrag(PointerEventData eventData) {
         //カードのコストとplayerのコストを比較
         CardController card = GetComponent<CardController>();
         if(card.model.isPlayerCard && GameManager.instance.isPlayerTurn == true && !card.model.isFieldCard && card.model.cost <= GameManager.instance.playerManaCost) {
@@ -35,7 +35,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
-    public void OnDrag(PointerEventData eventData){
+    public void OnDrag(PointerEventData eventData) {
         if (!isDraggable) {
 
             return;
@@ -43,7 +43,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         transform.position = eventData.position;
     }
 
-    public void OnEndDrag(PointerEventData eventData){
+    public void OnEndDrag(PointerEventData eventData) {
         if (!isDraggable) {
 
             return;
@@ -66,7 +66,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public IEnumerator MoveToTarget(Transform target) {
 
-        /*
+    /*
         修正すべきバグ
         ターゲットが元の位置に戻るときにdestroyされているとエラー出ている
         <とりあえずの修正>  0.51fの処理待ちを作ることで移動にかかる時間（0.5f）を待つ

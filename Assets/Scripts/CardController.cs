@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardController : MonoBehaviour{
+public class CardController : MonoBehaviour {
 
     //見かけに(view)関することの操作
     CardView view;
@@ -48,7 +48,7 @@ public class CardController : MonoBehaviour{
         view.SetActiveSelectablePanel(canAttack);
     }
 
-    public void CheckAleve(){
+    public void CheckAleve() {
 
         if (model.isAlive) {
 
@@ -60,4 +60,3 @@ public class CardController : MonoBehaviour{
         }
     }
 }
-

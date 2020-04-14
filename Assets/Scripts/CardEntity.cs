@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName ="CardEntity", menuName ="Create cardEntity")]
 //カードデータそのもの
-public class CardEntity : ScriptableObject{
+public class CardEntity : ScriptableObject {
 
     public new string name;
     public int hp;

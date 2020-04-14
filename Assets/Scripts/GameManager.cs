@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour{
+public class GameManager : MonoBehaviour {
 
     //publicにするときは  [SerializeField] public;
     [SerializeField] Transform playerHandTransform;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour{
                                        // インスタンスって？ : クラスという設計図を基に作成した実体
                                        //このinstanceはただの変数
 
-    private void Awake(){ // Awakeは自分で名前を付けた関数ではなく、もともと用意されているもの
+    private void Awake() { // Awakeは自分で名前を付けた関数ではなく、もともと用意されているもの
     
     if(instance == null) {// instanceに何も無かったら
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour{
         }
     }
     
-    void Start(){//Awake同様用意されたもの
+    void Start() {//Awake同様用意されたもの
   
         StartGame();
     }
@@ -480,7 +480,7 @@ public class GameManager : MonoBehaviour{
     /*カードを手札に渡す処理*/
     void CreateCard(int cardID, Transform hand) {
 
-        CardController card = Instantiate(cardPrefab, hand, false);//これよくわからない
+        CardController card = Instantiate(cardPrefab, hand, false);//オブジェクトの生成に関するもの
         if (hand.name == "PlayerHand") {
 
             card.Init(cardID, true);
@@ -501,7 +501,7 @@ public class GameManager : MonoBehaviour{
     }
 
     /*ヒーローに攻撃する処理*/
-    public void AttackToHero(CardController attacker, bool isPlayerCard){
+    public void AttackToHero(CardController attacker, bool isPlayerCard) {
 
         if(isPlayerCard){//プレイヤーカードなら
 

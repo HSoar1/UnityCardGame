@@ -237,3 +237,7 @@ C:\Users\b1019122\unityProject\CardGameProject\obj\Debug\Assembly-CSharp.csproj.
 C:\Users\b1019122\unityProject\CardGameProject\obj\Debug\Assembly-CSharp.dll
 C:\Users\b1019122\unityProject\CardGameProject\obj\Debug\Assembly-CSharp.pdb
 C:\Users\b1019122\unityProject\CardGameProject\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\b1019122\Desktop\#Unitic\Code\UnityCardGame1\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\b1019122\Desktop\#Unitic\Code\UnityCardGame1\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\b1019122\Desktop\#Unitic\Code\UnityCardGame1\obj\Debug\Assembly-CSharp.dll
+C:\Users\b1019122\Desktop\#Unitic\Code\UnityCardGame1\obj\Debug\Assembly-CSharp.pdb

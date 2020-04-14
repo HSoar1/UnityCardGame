@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 //攻撃される側
-public class AttackedCard : MonoBehaviour, IDropHandler{
+public class AttackedCard : MonoBehaviour, IDropHandler {
 
-    public void OnDrop(PointerEventData eventData){
+    public void OnDrop(PointerEventData eventData) {
 
         /*攻撃*/
         //attackerカード選択

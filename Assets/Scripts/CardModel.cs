@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //カードデータとその処理
-public class CardModel{
+public class CardModel {
 
     public string name;
     public int hp;
